@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="py-5 px-10 border-b flex justify-between items-center">
       <div>
-        <h1 className="text-2xl">
+        <h1 className="text-4xl">
           <Link href="/">Qiita記事</Link>
         </h1>
       </div>
