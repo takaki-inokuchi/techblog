@@ -12,7 +12,7 @@ const QiitaList = async () => {
       <h1>Qiita記事一覧（テスト4件）</h1>
       <ul className="">
         {articles.map((article: Qiita) => (
-          <li key={article.id} style={{ marginBottom: "20px" }}>
+          <li key={article.id} className="border-b pb-6">
             <a href={article.url} target="_blank" rel="noopener noreferrer">
               <Image
                 src={article.thumbnail}
@@ -30,7 +30,7 @@ const QiitaList = async () => {
               ...
             </div>
             <div className="hover:text-red-800 text-red-400">
-              <Link href={`qiita/${article.id}`}>続きを読む</Link>
+              <Link href={`/qiita/${article.id}`}>続きを読む</Link>
             </div>
           </li>
         ))}
