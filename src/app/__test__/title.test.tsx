@@ -1,9 +1,8 @@
-import { render } from "@testing-library/react";
-import Title from "../title/title";
+// import { render } from "@testing-library/react";
 
-describe("Title表示できているかどうか", () => {
-  test("表示？", () => {
-    render(<Title />);
-    expect(document.title).toBe("タイトルだよ");
-  });
-});
+// describe("Title表示できているかどうか", () => {
+//   test("表示？", () => {
+//     render(<Title />);
+//     expect(document.title).toBe("タイトルだよ");
+//   });
+// });

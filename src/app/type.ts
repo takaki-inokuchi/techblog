@@ -4,4 +4,14 @@ export type Qiita = {
   url: string;
   created_at: string;
   thumbnail: string;
-}
+  content: string;
+};
+
+export type QiitaItmes = {
+  id: string;
+  title: string;
+  url: string;
+  created_at: string;
+  thumbnail: string;
+  body: string;
+};

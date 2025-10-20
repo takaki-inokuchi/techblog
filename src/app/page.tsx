@@ -1,8 +1,11 @@
 // app/page.tsx
 
-export default function Home() {
-  return <div>
+import QiitaList from "./qiita/qiitalist";
 
-    alsdfj
-  </div>;
+export default async function Home() {
+  return (
+    <div>
+      <QiitaList />
+    </div>
+  );
 }
