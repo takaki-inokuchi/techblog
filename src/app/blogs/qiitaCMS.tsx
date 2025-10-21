@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllArticleCMS } from "../qiitaAPI";
 
-export default async function Home() {
+const QiitaListCMS = async () => {
   const qiitadata = await getAllArticleCMS();
 
   return (
@@ -31,4 +31,6 @@ export default async function Home() {
       </ul>
     </div>
   );
-}
+};
+
+export default QiitaListCMS;

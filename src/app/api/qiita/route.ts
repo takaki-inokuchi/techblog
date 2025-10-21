@@ -1,7 +1,7 @@
 import { QiitaItmes } from "@/app/type";
 import { NextResponse } from "next/server";
 
-const thumbnail = "https://picsum.photos/id/1/600/600";
+const thumbnail = "/qiita.png";
 
 export async function GET() {
   const token = process.env.QIITA_TOKEN;
@@ -31,7 +31,7 @@ export async function GET() {
 
     const data = await res.json();
 
-    const articles = data.slice(0, 4).map((item: QiitaItmes) => ({
+    const articles = data.slice(0, 20).map((item: QiitaItmes) => ({
       id: item.id,
       title: item.title,
       url: item.url,
