@@ -17,6 +17,7 @@ const QiitaArticle = async ({ params }: { params: { id: string } }) => {
       />
       <h1 className="text-center text-2xl mb-4 mt-4">{article.title}</h1>
       <div className="leading-relaxed">{article.content}</div>
+      <div className="py-3">公開日{article.created_at}</div>
     </div>
   );
 };

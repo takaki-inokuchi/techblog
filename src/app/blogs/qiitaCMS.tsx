@@ -74,7 +74,7 @@ const QiitaListCMS = () => {
                   href={`/blogs/${post.id}`}
                   className="text-blue-400 hover:underline hover:text-blue-300"
                 >
-                  続きを読む
+                  記事を読む
                 </Link>
               </div>
             </li>

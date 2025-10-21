@@ -65,7 +65,7 @@ const QiitaList = () => {
               <div>{new Date(article.created_at).toLocaleDateString()}</div>
 
               <div className="hover:text-red-800 text-red-400">
-                <Link href={`/qiita/${article.id}`}>続きを読む</Link>
+                <Link href={`/qiita/${article.id}`}>記事を読む</Link>
               </div>
             </li>
           ))}

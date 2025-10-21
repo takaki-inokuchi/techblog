@@ -5,6 +5,7 @@ type BlogPost = {
   id: string;
   title: string;
   content: string;
+  createdAt: string;
 };
 
 const CMSpage = async ({ params }: { params: { id: string } }) => {
@@ -22,6 +23,7 @@ const CMSpage = async ({ params }: { params: { id: string } }) => {
       </h1>
 
       <div dangerouslySetInnerHTML={{ __html: article.content }} />
+      <div className="py-3">公開日{article.createdAt}</div>
     </div>
   );
 };
