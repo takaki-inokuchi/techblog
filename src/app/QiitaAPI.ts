@@ -1,3 +1,5 @@
+import { BlogPost } from "./type";
+
 export const getAllArticle = async () => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const res = await fetch(`${baseUrl}/api/qiita`);
@@ -11,11 +13,7 @@ export const getAllArticle = async () => {
   return Array.isArray(data) ? data : data.data;
 };
 
-export type BlogPost = {
-  id: string;
-  title: string;
-  content: string;
-};
+
 
 export const getAllArticleCMS = async (): Promise<BlogPost[]> => {
   const res = await fetch(

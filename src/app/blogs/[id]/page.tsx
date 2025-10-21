@@ -20,7 +20,8 @@ const CMSpage = async ({ params }: { params: { id: string } }) => {
       <h1 className="text-3xl font-bold text-slate-100 mb-4">
         {article.title}
       </h1>
-      <div>{article.content}</div>
+
+      <div dangerouslySetInnerHTML={{ __html: article.content }} />
     </div>
   );
 };

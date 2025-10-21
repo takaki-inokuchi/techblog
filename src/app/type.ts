@@ -15,3 +15,15 @@ export type QiitaItmes = {
   thumbnail: string;
   body: string;
 };
+
+export type BlogPost = {
+  id: string;
+  title: string;
+  content: string;
+  createdAt:string;
+  mainImage?: {
+    url: string;
+    width: number;
+    height: number;
+  };
+};
