@@ -15,7 +15,7 @@ describe("もっと見るボタン", () => {
   test("投稿4件以上でshowAllがfalseになる");
 });
 
-jest.mock("../QiitaAPI", () => ({
+jest.mock("../qiitaapi", () => ({
   getAllArticleCMS: jest.fn().mockResolvedValue([
     {
       id: "1",
