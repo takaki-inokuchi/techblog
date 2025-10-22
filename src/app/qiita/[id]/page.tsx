@@ -1,4 +1,4 @@
-import { getAllArticle } from "@/app/qiitaapi";
+import { getAllArticle } from "@/app/AAAAA";
 import { Qiita } from "@/app/type";
 import Image from "next/image";
 

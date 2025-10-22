@@ -3,7 +3,7 @@ import { Qiita } from "@/app/type";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getAllArticle } from "../qiitaapi";
+import { getAllArticle } from "../AAAAA";
 
 const QiitaList = () => {
   const [posts, setPosts] = useState<Qiita[]>([]);
