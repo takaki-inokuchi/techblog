@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import QiitaListCMS from "../blogs/qiitacms";
+import QiitaListCMS from "../blogs/BBBBB";
 
 describe("表示できているかどうか", () => {
   test("ブログ記事という文字列", () => {

@@ -1,4 +1,4 @@
-import QiitaListCMS from "./qiitacms";
+import QiitaListCMS from "./BBBBB";
 
 const page = () => {
   return (
