@@ -1,4 +1,4 @@
-import QiitaList from "./qiitalist";
+import QiitaList from "./VVVVV";
 
 const page = () => {
   return (

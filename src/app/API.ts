@@ -23,7 +23,7 @@ export const getAllArticleCMS = async (): Promise<BlogPost[]> => {
     `https://${process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN}.microcms.io/api/v1/blogs`,
     {
       headers: {
-        "X-API-KEY": process.env.NEXT_PUBLIC_MICROCMS_API_KEY || "",
+        "X-API-KEY": process.env.MICROCMS_API_KEY || "",
       },
     }
   );
