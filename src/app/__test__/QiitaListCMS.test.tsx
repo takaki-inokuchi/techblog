@@ -1,42 +1,42 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
-import QiitaList from "../qiita/QiitaList";
+import QiitaListCMS from "../blogs/QiitaListCMS";
 
 jest.mock("../API", () => ({
-  getAllArticle: jest.fn().mockResolvedValue([
+  getAllArticleCMS: jest.fn().mockResolvedValue([
     {
-      id: 1,
+      id: "1",
       title: "記事1",
-      url: { url: "/img1,jpg" },
-      created_at: "2025-01-01",
-      thumbnail: "/img1.jpg",
+      creratedAT: "2025-01-01",
+      mainImage: { url: "/img1,jpg" },
+      readMoreText: "記事を読む",
     },
     {
-      id: 2,
+      id: "2",
       title: "記事2",
-      url: { url: "/img1,jpg" },
-      created_at: "2025-01-01",
-      thumbnail: "/img1.jpg",
+      creratedAT: "2025-01-01",
+      mainImage: { url: "/img1,jpg" },
+      readMoreText: "記事を読む",
     },
     {
-      id: 3,
+      id: "3",
       title: "記事3",
-      url: { url: "/img1,jpg" },
-      created_at: "2025-01-01",
-      thumbnail: "/img1.jpg",
+      creratedAT: "2025-01-01",
+      mainImage: { url: "/img1,jpg" },
+      readMoreText: "記事を読む",
     },
     {
-      id: 4,
+      id: "4",
       title: "記事4",
-      url: { url: "/img1,jpg" },
-      created_at: "2025-01-01",
-      thumbnail: "/img1.jpg",
+      creratedAT: "2025-01-01",
+      mainImage: { url: "/img1,jpg" },
+      readMoreText: "記事を読む",
     },
-    {
-      id: 5,
+     {
+      id: "5",
       title: "記事5",
-      url: { url: "/img1,jpg" },
-      created_at: "2025-01-01",
-      thumbnail: "/img1.jpg",
+      creratedAT: "2025-01-01",
+      mainImage: { url: "/img1,jpg" },
+      readMoreText: "記事を読む",
     },
   ]),
 }));
@@ -44,12 +44,12 @@ jest.mock("../API", () => ({
 describe("表示できているかどうか", () => {
   beforeEach(async () => {
     await act(async () => {
-      render(<QiitaList />);
+      render(<QiitaListCMS />);
     });
   });
 
   test("ブログ記事という文字列", async () => {
-    expect(await screen.findByText("個人記事")).toBeInTheDocument();
+    expect(await screen.findByText("ブログ記事")).toBeInTheDocument();
   });
   test("記事を読むという文字列", async () => {
     const links = await screen.findAllByText("記事を読む");
@@ -62,7 +62,7 @@ describe("ボタン表示テスト", () => {
 
   beforeEach(async () => {
     await act(async () => {
-      render(<QiitaList />);
+      render(<QiitaListCMS />);
     });
     moreButton = await screen.findByRole("button", { name: "もっと見る" });
   });
