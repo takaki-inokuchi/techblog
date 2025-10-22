@@ -1,6 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import QiitaListCMS from "../blogs/qiitaCMS";
-import { getAllArticle, getAllArticleCMS } from "../qiitaAPI";
 
 describe("表示できているかどうか", () => {
   test("ブログ記事という文字列", () => {
@@ -16,7 +15,7 @@ describe("もっと見るボタン", () => {
   test("投稿4件以上でshowAllがfalseになる");
 });
 
-jest.mock("../qiitaAPI", () => ({
+jest.mock("../QiitaAPI", () => ({
   getAllArticleCMS: jest.fn().mockResolvedValue([
     {
       id: "1",

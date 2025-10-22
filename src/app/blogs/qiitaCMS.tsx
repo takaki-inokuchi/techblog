@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import { getAllArticleCMS } from "../qiitaAPI";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BlogPost } from "../type";
+import { getAllArticleCMS } from "../QiitaAPI";
 
 const QiitaListCMS = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
