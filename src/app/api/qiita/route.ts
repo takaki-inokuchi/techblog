@@ -1,4 +1,4 @@
-import { QiitaItmes } from "@/app/type";
+import { QiitaItmes } from "../../type";
 import { NextResponse } from "next/server";
 
 const thumbnail = "/qiita.png";
