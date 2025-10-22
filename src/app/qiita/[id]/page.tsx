@@ -6,6 +6,10 @@ const QiitaArticle = async ({ params }: { params: { id: string } }) => {
   const qiitadata = await getAllArticle();
   const article = qiitadata.find((item: Qiita) => item.id === params.id);
 
+  if (!article) {
+    return <div>記事が見つかりませんでした。</div>;
+  }
+
   return (
     <div className="max-w-3xl mx-auto p-5">
       <Image
