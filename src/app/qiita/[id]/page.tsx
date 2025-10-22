@@ -7,7 +7,7 @@ const QiitaArticle = async ({ params }: { params: { id: string } }) => {
   const article = qiitadata.find((item: Qiita) => item.id === params.id);
 
   if (!article) {
-    return <div>記事が見つかりませんでした。</div>;
+    return <div>記事が見つかりませんでした</div>;
   }
 
   return (
