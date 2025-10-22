@@ -1,6 +1,6 @@
 // app/page.tsx
 
-import QiitaListCMS from "./blogs/BBBBB";
+import QiitaListCMS from "./blogs/QiitaListCMS";
 import QiitaList from "./qiita/qiitalist";
 
 export default async function Home() {

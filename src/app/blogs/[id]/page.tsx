@@ -1,4 +1,4 @@
-import { getAllArticleCMS } from "../../AAAAA";
+import { getAllArticleCMS } from "../../API";
 import React from "react";
 
 type BlogPost = {
