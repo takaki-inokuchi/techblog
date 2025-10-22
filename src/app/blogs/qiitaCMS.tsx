@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BlogPost } from "../type";
-import { getAllArticleCMS } from "../QiitaAPI";
+import { getAllArticleCMS } from "../qiitaapi";
 
 const QiitaListCMS = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);

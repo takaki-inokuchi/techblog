@@ -1,4 +1,4 @@
-import { getAllArticleCMS } from "../../QiitaAPI";
+import { getAllArticleCMS } from "../../qiitaapi";
 import React from "react";
 
 type BlogPost = {
