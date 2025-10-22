@@ -19,19 +19,19 @@ export const getAllArticle = async () => {
 };
 
 export const getAllArticleCMS = async (): Promise<BlogPost[]> => {
-  const res = await fetch(
-    `https://${process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN}.microcms.io/api/v1/blogs`,
-    {
-      headers: {
-        "X-API-KEY": process.env.MICROCMS_API_KEY || "",
-      },
-    }
-  );
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  if (!baseUrl) {
+    throw new Error("環境変数 NEXT_PUBLIC_BASE_URL が設定されていません");
+  }
+
+  const res = await fetch(`${baseUrl}/api/blogs`);
 
   if (!res.ok) {
     throw new Error("記事の取得に失敗");
   }
 
   const data = await res.json();
-  return data.contents;
+
+  return Array.isArray(data) ? data : data.data;
 };
