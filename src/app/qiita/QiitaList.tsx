@@ -29,7 +29,7 @@ const QiitaList = () => {
           <div className="mt-8 text-center">
             <button
               onClick={() => setShowAll(true)}
-              className="px-6 py-2 bg-slate-500 text-white rounded hover:bg-slate-900"
+              className="px-6 py-2 bg-slate-500 text-white rounded hover:bg-slate-900  transition btn btn-primary btn-md"
             >
               もっと見る
             </button>
@@ -39,7 +39,7 @@ const QiitaList = () => {
           <div className="mt-8 text-center">
             <button
               onClick={() => setShowAll(false)}
-              className="px-6 py-2 bg-slate-500 text-white rounded hover:bg-slate-900"
+              className="px-6 py-2 bg-slate-500 text-white rounded hover:bg-slate-900 transition btn btn-primary btn-md"
             >
               閉じる
             </button>
@@ -47,10 +47,10 @@ const QiitaList = () => {
         )}
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-2 py-4">
         <ul className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {displayPosts.map((article: Qiita) => (
-            <li key={article.id} className="bg-slate-800 rounded-lg shadow-md ">
+            <li key={article.id} className="bg-slate-800 rounded-lg shadow-md card-body">
               <a href={article.url} target="_blank" rel="noopener noreferrer">
                 <Image
                   src={article.thumbnail}
@@ -59,7 +59,7 @@ const QiitaList = () => {
                   alt="thumbnail"
                 />
               </a>
-              <h2 className="text-xl font-semibold text-slate-100 mb-3 hover:text-slate-400">
+              <h2 className="text-xl font-semibold text-slate-100 mb-3 hover:text-slate-400 ">
                 {article.title}
               </h2>
               <div>{new Date(article.created_at).toLocaleDateString()}</div>
