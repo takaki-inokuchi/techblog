@@ -33,14 +33,14 @@ describe("getAllArticle,getAllArticleCMS", () => {
   test("getAllArticle:fetchが失敗する場合", async () => {
     process.env.NEXT_PUBLIC_BASE_URL = "https//example.com";
 
-    (global.fetch as any).mockResolvedValueOnce({ ok: false });
+    (global.fetch as jest.Mock).mockResolvedValueOnce({ ok: false });
     await expect(getAllArticle()).rejects.toThrow("記事の取得に失敗");
   });
 
   test("getAllArticleCMS:fetchが失敗する場合", async () => {
     process.env.NEXT_PUBLIC_BASE_URL = "https//example.com";
 
-    (global.fetch as any).mockResolvedValueOnce({ ok: false });
+    (global.fetch as jest.Mock).mockResolvedValueOnce({ ok: false });
     await expect(getAllArticleCMS()).rejects.toThrow("記事の取得に失敗");
   });
 
@@ -58,7 +58,7 @@ describe("getAllArticle,getAllArticleCMS", () => {
       },
     ];
 
-    (global.fetch as any).mockResolvedValueOnce({
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
       ok: true,
       json: async () => ({ data: mockcontens }),
     });
@@ -83,7 +83,7 @@ describe("getAllArticle,getAllArticleCMS", () => {
       },
     ];
 
-    (global.fetch as any).mockResolvedValueOnce({
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
       ok: true,
       json: async () => ({ data: mockcontens }),
     });

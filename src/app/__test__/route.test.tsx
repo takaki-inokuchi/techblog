@@ -39,7 +39,7 @@ describe("GET /api/blogs", () => {
     process.env.MICROCMS_SERVICE_DOMAIN = "example";
     process.env.MICROCMS_API_KEY = "testkey";
 
-    (fetch as any).mockResolvedValueOnce({
+    (fetch as jest.Mock).mockResolvedValueOnce({
       ok: false,
     });
     const res = await GET();
@@ -78,7 +78,7 @@ describe("GET /api/blogs", () => {
       },
     ];
 
-    (global.fetch as any).mockResolvedValueOnce({
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
       ok: true,
       json: async () => ({ contents: mockBlogPosts }),
     });
