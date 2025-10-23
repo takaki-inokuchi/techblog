@@ -3,7 +3,7 @@ import { BlogPost } from "../type";
 
 jest.mock("next/server", () => ({
   NextResponse: {
-    json: (data: any, init?: any) => ({
+    json: (data: jest.Mock, init?: jest.Mock) => ({
       ...init,
       json: async () => data,
     }),
