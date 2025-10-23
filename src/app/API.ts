@@ -1,6 +1,6 @@
-import { BlogPost } from "./type";
+import { BlogPost, Qiita } from "./type";
 
-export const getAllArticle = async () => {
+export const getAllArticle = async (): Promise<Qiita[]> => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   if (!baseUrl) {

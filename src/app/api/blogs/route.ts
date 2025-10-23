@@ -21,5 +21,5 @@ export async function GET() {
   }
 
   const data = await res.json();
-  return NextResponse.json(data.contents as BlogPost[]);
+  return NextResponse.json(data.contents as BlogPost[], { status: 200 });
 }
